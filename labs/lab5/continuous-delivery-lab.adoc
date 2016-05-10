@@ -12,7 +12,7 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
   
 . Edit the manifest.yml at the root of the forked spring-music repository. Change the *host* from ${random-word} to your initials. Jenkins does not like the special characters in the host field and will give an error.
   
-. Login to your Jenkins instance at https://jenkins-0.cfpoc2.internal.t-mobile.com/ with the same username and password that you use for CloudFoundry.
+. Login to your Jenkins instance at https://jenkins-0.pcf.mts.inbcu.com/ with the same username and password that you use for CloudFoundry.
 
 
 == Create the Build Job
