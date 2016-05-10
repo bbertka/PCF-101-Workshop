@@ -2,7 +2,7 @@
 
 == Schedule
 
-. This afternoon hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry fundamentals of pushing code and building applications. The session includes demos and hands on labs
+This afternoon hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry fundamentals of pushing code and building applications. The session includes demos and hands on labs
 +
 2:00 PM - 2:30 PM::
  * Introduction to Cloud Foundry
