@@ -23,7 +23,7 @@ Follow the prompts
 . Change to the _cf-spring-mvc-boot_ sample application directory:
 +
 ----
-$ cd $BOOTCAMP_HOME/cf-spring-mvc-boot
+$ cd PCF-101-Workshop/cf-spring-mvc-boot
 ----
 
 . Push the application!
