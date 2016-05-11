@@ -288,3 +288,12 @@ time                          event                 actor      description
 2015-08-11T08:54:22.00-0400   audit.app.map-route   admin
 2015-08-11T08:54:19.00-0400   audit.app.create      admin      instances: 1, memory: 512, state: STOPPED, environment_json: PRIVATE DATA HIDDEN
 ----
+
+== Labs
+ * Lab 1 - From Zero to Pushing Your First Application
+ ** link:../lab1/lab.adoc[**Java** Application]
+ ** link:../lab1/lab-ruby.adoc[**Ruby** Application]
+ * link:../lab2/lab.adoc[Lab 2 - Binding to Cloud Foundry Services]
+ * link:../lab3/lab.adoc[Lab 3 - Operating Your Application]
+ * link:../lab4/lab.adoc[Lab 4 - Monitoring Your Application]
+ * link:../lab5/continuous-delivery-lab.adoc[Advanced Lab - Jenkins Integration]
