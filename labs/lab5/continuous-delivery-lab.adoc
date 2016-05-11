@@ -46,14 +46,14 @@ If your Jenkins Instance is configured for a Proxy (eg. 100.115.73.81:443) add s
 
 [source, bash]
 ----------------
--Dhttp.proxyHost=100.115.73.81 -Dhttp.proxyPort=443 -Dhttps.proxyHost=100.115.73.81 -Dhttps.proxyPort=443`
+-Dhttp.proxyHost=100.115.73.81 -Dhttp.proxyPort=443 -Dhttps.proxyHost=100.115.73.81 -Dhttps.proxyPort=443
 ----------------
 
 . In tasks, enter `clean assemble`.
 
 . In build file, enter `build.gradle`.
 
-. Check *Force GRADLE_USER_HOME to use workspace.
+. Check _Force GRADLE_USER_HOME_ to use workspace.
 
 == Execute Shell
 [source,bash]
