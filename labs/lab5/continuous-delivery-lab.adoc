@@ -65,13 +65,26 @@ echo DEPLOYED_VERSION_CMD
 export ROUTE_VERSION="default"
 echo "Deployed Version: $DEPLOYED_VERSION"
 echo "Route Version: $ROUTE_VERSION"
+
+# Save your api target in variable API
 export API=https://api.system.pcf.mts.inbcu.com
 
+# Set current target api to API
 cf api --skip-ssl-validation $API
-cf login -u <user> -p <password> -o <org> -s <space>
+
+# Use your credentials here to login
+cf login -u username -p password -o org -s space
+
+# Create an instance of the mysql service
 cf create-service p-mysql 100mb-dev spring-music-db
+
+# Create/Update the spring-music app using the versioned manifest.yml, but dont start
 cf push spring-music -f manifest.yml --no-start
+
+# Bind the application to the service instance
 cf bind-service spring-music spring-music-db
+
+# Start the application
 cf start spring-music
 ----
 
