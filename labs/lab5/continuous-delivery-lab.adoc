@@ -8,8 +8,8 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Fork the Spring-Music repository. If you do not have a github account, you can skip this step and use my repository.
 
-  `https://github.com/cloudfoundry-samples/spring-music.git`
-  
+`https://github.com/cloudfoundry-samples/spring-music.git`
+ 
 . Edit the manifest.yml at the root of the forked spring-music repository. Change the *host* from ${random-word} to your initials. Jenkins does not like the special characters in the host field and will give an error.
   
 . Login to your Jenkins instance at https://jenkins-0.system.pcf.mts.inbcu.com/ with the same username and password that you use for CloudFoundry.
@@ -23,6 +23,15 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Under *Source Code Management*, select *Git*, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/spring-music`). Leave credentials as *none*.
 
+. On "Build Triggers", select "Build when a change is pushed to GitHub", and "POLL SCM"
++
+POLL SCM Settings to check for changes on an interval (every minute in this case):
++
+[source, bash]
+----------------
+*/1 * * * *
+----------------
+
 == Configure Gradle Build
 
 . Select *Add Build Step* and then *Invoke Gradle Script*.
@@ -34,16 +43,17 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 . In switches, enter `-Pbuildversion=$BUILD_NUMBER`
 +
 If your Jenkins Instance is configured for a Proxy (eg. 100.115.73.81:443) add switch:
-+
-`-Dhttp.proxyHost=100.115.73.81 -Dhttp.proxyPort=443 -Dhttps.proxyHost=100.115.73.81 -Dhttps.proxyPort=443`
+
+[source, bash]
+----------------
+-Dhttp.proxyHost=100.115.73.81 -Dhttp.proxyPort=443 -Dhttps.proxyHost=100.115.73.81 -Dhttps.proxyPort=443`
+----------------
 
 . In tasks, enter `clean assemble`.
 
 . In build file, enter `build.gradle`.
 
 . Check *Force GRADLE_USER_HOME to use workspace.
-
-. On "Build Triggers", select "Build when a change is pushed to GitHub"
 
 == Execute Shell
 [source,bash]
