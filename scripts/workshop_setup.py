@@ -2,7 +2,7 @@
 import sys, subprocess
 
 DEFAULT_USER_PASSWORD="w0rksh0p"
-DEFAULT_ADMIN_PASSWORD="w0rksh0p"
+DEFAULT_ADMIN_PASSWORD="cl0udc0w"
 
 def setSpaceRole(email=None, org=None, space=None, role=None):
         if not space and not email and not org and not role:
@@ -64,6 +64,7 @@ if __name__=="__main__":
 	createOrg(org)
 	createSpace(org, "development")	
         createSpace(org, "production")
+        createSpace(org, "test")
 	with open("admins.txt") as f:
                 for line in f:
                         email = line.strip()
