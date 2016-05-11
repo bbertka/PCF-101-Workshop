@@ -32,8 +32,10 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 . Check both *Make gradlew executable* and *From Root Build Script Directory*.
 
 . In switches, enter `-Pbuildversion=$BUILD_NUMBER`
-
-. If your Jenkins Instance is configured for a Proxy (eg. 100.115.73.81:443), enter  `-Dhttp.proxyHost=100.115.73.81 -Dhttp.proxyPort=443 -Dhttps.proxyHost=100.115.73.81 -Dhttps.proxyPort=443`
++
+If your Jenkins Instance is configured for a Proxy (eg. 100.115.73.81:443) add switch:
++
+`-Dhttp.proxyHost=100.115.73.81 -Dhttp.proxyPort=443 -Dhttps.proxyHost=100.115.73.81 -Dhttps.proxyPort=443`
 
 . In tasks, enter `clean assemble`.
 
